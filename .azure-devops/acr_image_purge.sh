@@ -1,3 +1,5 @@
+
+
 #!/bin/bash
 set -e
 
@@ -60,7 +62,8 @@ done
 PURGE_CMD="acr purge --filter '.*:pr-[0-9a-fA-F]+' --ago 4d --untagged"
 
 az acr task create --name prTagPruneTask \
-  --cmd "$PURGE_CMD" \
+  --cmd "$PURG
+  E_CMD" \
   --registry $registry_name \
   --schedule "4 18 * * *" \
   --context /dev/null \
